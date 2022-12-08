@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- logo -->
+      <h1>
+        <img src="./images/logo.svg" id="logo" alt="logo-for-calculator" />
+      </h1>
+      <section class="container">
+        <!-- left section  -->
+        <article class="input-container">
+          <form class="amount-input">
+            <label for="bill-amount">Bill</label>
+            <img
+              src="./images/icon-dollar.svg"
+              id="dollar-logo"
+              alt="logo-for-dollar"
+            />
+            <input
+              class="input-field"
+              type="number"
+              name="amount"
+              id="bill-amount"
+              placeholder="0"
+              aria-label="bill-amount"
+              min="0"
+            />
+          </form>
+          <!-- tip percent buttons -->
+          <form class="select-tip">
+            <label>Select Tip %</label>
+            <div class="percent-options">
+              <button
+                class="btn"
+                id="btn_5"
+                type="button"
+                aria-label="add-5-percentage"
+              >
+                5%
+              </button>
+              <button
+                class="btn"
+                id="btn_10"
+                type="button"
+                aria-label="add-10-percentage"
+              >
+                10%
+              </button>
+              <button
+                class="btn"
+                id="btn_15"
+                type="button"
+                aria-label="add-15-percentage"
+              >
+                15%
+              </button>
+              <button
+                class="btn"
+                id="btn_25"
+                type="button"
+                aria-label="add-25-percentage"
+              >
+                25%
+              </button>
+              <button
+                class="btn"
+                id="btn_50"
+                type="button"
+                aria-label="add-50-percentage"
+              >
+                50%
+              </button>
+              <input
+                id="custom"
+                class="custom-percentage"
+                type="number"
+                max="100"
+                placeholder="Custom"
+                aria-label="enter-custom-input"
+              />
+            </div>
+          </form>
+          <form class="num-people">
+            <label for="people-count" id="no_of_people">Number of People</label>
+            <label class="hide" id="zero">Can't be zero</label>
+            <img
+              src="./images/icon-person.svg"
+              id="person-logo"
+              alt="logo-for-person"
+            />
+            <input type="number" class="input-field" name="number-people"
+            id="people-count" placeholder="0" aria-label="enter-number-of-people
+            required aria-required="true" min="0" max="100" />
+          </form>
+        </article>
+        <!-- right section -->
+        <article class="display-container">
+          <div class="display-tip">
+            <div>
+              <p class="display-description">Tip amount</p>
+              <p>/person</p>
+            </div>
+            <p class="amount" id="show-tip">$0.00</p>
+          </div>
+          <div class="display-total">
+            <div>
+              <p class="display-description">Total</p>
+              <p>/person</p>
+            </div>
+            <p class="amount" id="show-total">$0.00</p>
+          </div>
+          <button
+            class="reset-btn disable"
+            id="resetBtn"
+            aria-label="reset"
+            disabled
+          >
+            reset
+          </button>
+        </article>
+      </section>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
