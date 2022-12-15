@@ -1,0 +1,191 @@
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --light-green: hsl(184, 100%, 22%);
+  --dark-green: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --big-shoulders: "Big Shoulders Display", cursive;
+  --lexend-deca: "Lexend Deca", sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* general styling */
+
+body {
+  font-size: 15px;
+  background-color: var(--light-gray);
+  padding: 4rem 2rem;
+  font-weight: 400;
+  font-family: var(--lexend-deca);
+  /* don't use it on body its just for practice */
+  /* display: flex; */
+}
+.container__card {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  padding: 2rem 1.5rem;
+}
+.card1 {
+  background-color: var(--orange);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card2 {
+  background-color: var(--light-green);
+}
+.card3 {
+  background-color: var(--dark-green);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.title {
+  font-family: var(--big-shoulders);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  margin-top: 2rem;
+  color: var(--light-gray);
+}
+.para {
+  color: var(--transparent-white);
+  margin-top: 2rem;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.8rem;
+  margin-top: 2rem;
+  background-color: var(--light-gray);
+  cursor: pointer;
+}
+.btn1 {
+  color: var(--orange);
+}
+.btn1:hover {
+  color: var(--light-gray);
+  background-color: var(--orange);
+  border: 1px solid var(--light-gray);
+}
+.btn2 {
+  color: var(--light-green);
+}
+.btn2:hover {
+  color: var(--light-gray);
+  background-color: var(--light-green);
+  border: 1px solid var(--light-gray);
+}
+.btn3 {
+  color: var(--dark-green);
+}
+.btn3:hover {
+  color: var(--light-gray);
+  background-color: var(--dark-green);
+  border: 1px solid var(--light-gray);
+}
+
+@media (min-width: 600px) {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container__card {
+    flex-direction: row;
+    max-width: 850px;
+  }
+  .card {
+    padding: 2.5rem;
+  }
+  .card1 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+  }
+  .card3 {
+    border-top-right-radius: 5px;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+  }
+  .para {
+    margin-bottom: 3rem;
+  }
+}
